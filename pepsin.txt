@@ -1,0 +1,11 @@
+# Reaction rates, v (in mM.s-1), for enzymatic kinetics of pepsin with
+# bovine serum albumin (S, in mM)
+
+S / mM		v / mM.s-1
+0.1		0.00339
+0.2		0.00549
+0.5		0.00875
+1.0		0.01090
+5.0		0.01358
+10.0		0.01401
+20.0		0.01423
