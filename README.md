@@ -94,6 +94,7 @@ The experiment was carried out at $$35^{0}C$$ and a pH of 2 with a total concent
 
 For simple linear regression on $n$ points a straight line model, $y=a+bx$, 
 
+
 ### Step 2. Fitting a Line of Best fit
 The experiment were carried out at $35 ^{o}C$ and a pH of 2 with a totl concentration of pepsin of $[E]_{0}=0.028\;mM$. Use `np.linalg.lstsq` to fit the data and obtain values for $K_M,\;v_{max}\;and\;k_2$.
 
