@@ -39,6 +39,7 @@ When we plot $y=\frac{1}{v}$ versus $x=\frac{1}{[S]}$, we obtain a straight line
     <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/LB-plot.jpg/500px-LB-plot.jpg' alt='Figure from Wekepedia'>
 </p>
 
+![Figure. An example of a Lineweaver-Burke plot from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/LB-plot.jpg/500px-LB-plot.jpg)
 
 ## P19.5 Exercise 
 Pepsin is one of the  main enzymes in the digestive systems of mammals, where it helps to break down proteins into smallers peptides which can be absorbed by the small intestine. In a study of the enzymatic kinetics of pepsin with the protein bovine serum albumin (S), the rate of reaction, $v$, was measured as a function of substrate concentration, [S]; these data are given in the file [pepsin.txt](https://github.com/dindagustiayu/The-Matrix-of-Enzymatic-Kinetics/blob/main/pepsin.txt)
@@ -94,6 +95,12 @@ The experiment was carried out at $$35^{0}C$$ and a pH of 2 with a total concent
 
 For simple linear regression on $n$ points a straight line model, $y=a+bx$, 
 
+![](https://github.com/dindagustiayu/The-Matrix-of-Enzymatic-Kinetics/blob/main/Linear%20fit%20svg/Plotted%20as%20a%20function%20of%20enzymatic%20kinetics.svg)
+
+### Step 2. Fitting a Line of Best fit
+The experiment were carried out at $35 ^{o}C$ and a pH of 2 with a totl concentration of pepsin of $[E]_{0}=0.028\;mM$. Use `np.linalg.lstsq` to fit the data and obtain values for $K_M,\;v_{max}\;and\;k_2$.
+
+For simple linear regression on $n$ points a straight line model, $y=a+bx$, 
 <p align='center'>
     $$\hat{\beta}=\begin{pmatrix} a\\ b \end{pmatrix}=(X^T X)^{-1} X^Ty$$
 </p>
@@ -131,6 +138,11 @@ where,
 and
 <p align='center'>
     $$\begin{align} b&= \frac{1}{\Delta} \left[y_1 \left(nx_1-\sum{x_i} \right)+y_2 \left(nx_2-\sum{x_i} \right)+ \cdots + y_n \left(nx_n - \sum{x_i} \right) \right] \\&=\frac{1}{\Delta} \left [n \left(\sum{x_iy_i} \right)- \left(\sum{y_i} \right) \left(\sum{x_i} \right) \right]\\ &=\frac{nS_{xy}-S_x S_y}{nS_{xx}-S_x^2}\end{align}$$
+    $$\begin{align} a&=\frac{1}{\Delta}[y_1(\sum{x_i^2}-x_1 \sum{x_i})+y_2(\sum{x_i^2}-x_2\sum{x_i})+ \cdots + y_n (\sum{x_i^2}-x_n\sum{x_i})] \\&=\frac{1}{\Delta}[(\sum{y_i}(\sum{x_i^2})-(\sum{x_i y_i})(\sum{x_i})] \\ &=\frac{S_yS_{xx}-S_{xy}S_x}{nS_{xx}-S_x^2} \end{align}$$
+</p>
+and
+<p align='center'>
+    $$\begin{align} b&= \frac{1}{\Delta}[y_1(nx_1-\sum{x_i})+y_2(nx_2-\sum{x_i})+ \cdots + y_n(nx_n - \sum{x_i})] \\&=\frac{1}{\Delta}[n(\sum{x_iy_i}-(\sum{y_i})(\sum{x_i})]\\ &=\frac{nS_{xy}-S_x S_y}{nS_{xx}-S_x^2}\end{align}$$
 </p>
 
 ```python
@@ -172,3 +184,4 @@ plt.show()
 <p align='center'>
     <img src='https://github.com/dindagustiayu/The-Matrix-of-Enzymatic-Kinetics/blob/main/Linear%20fit%20svg/Linearweaver-Burk%20Plot%20for%20pepsin.svg'>
 </p>
+
