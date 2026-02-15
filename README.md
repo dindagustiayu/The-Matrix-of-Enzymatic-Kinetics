@@ -39,7 +39,6 @@ When we plot $y=\frac{1}{v}$ versus $x=\frac{1}{[S]}$, we obtain a straight line
     <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/LB-plot.jpg/500px-LB-plot.jpg' alt='Figure from Wekepedia'>
 </p>
 
-![Figure. An example of a Lineweaver-Burke plot from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/LB-plot.jpg/500px-LB-plot.jpg)
 
 ## P19.5 Exercise 
 Pepsin is one of the  main enzymes in the digestive systems of mammals, where it helps to break down proteins into smallers peptides which can be absorbed by the small intestine. In a study of the enzymatic kinetics of pepsin with the protein bovine serum albumin (S), the rate of reaction, $v$, was measured as a function of substrate concentration, [S]; these data are given in the file [pepsin.txt](https://github.com/dindagustiayu/The-Matrix-of-Enzymatic-Kinetics/blob/main/pepsin.txt)
@@ -94,8 +93,6 @@ plt.ylabel('$\\mathrm{1/[v]} \\; s(mM)^{-1}$')
 The experiment was carried out at $$35^{0}C$$ and a pH of 2 with a total concentration of pepsin of $$E_0 = 0.028 mM$$. Use `np.linalg.lstsq` to fit the data and obtain values for $$K_M, v_{max} , and K_2$$.
 
 For simple linear regression on $n$ points a straight line model, $y=a+bx$, 
-
-![](https://github.com/dindagustiayu/The-Matrix-of-Enzymatic-Kinetics/blob/main/Linear%20fit%20svg/Plotted%20as%20a%20function%20of%20enzymatic%20kinetics.svg)
 
 ### Step 2. Fitting a Line of Best fit
 The experiment were carried out at $35 ^{o}C$ and a pH of 2 with a totl concentration of pepsin of $[E]_{0}=0.028\;mM$. Use `np.linalg.lstsq` to fit the data and obtain values for $K_M,\;v_{max}\;and\;k_2$.
