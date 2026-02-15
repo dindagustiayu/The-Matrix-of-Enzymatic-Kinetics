@@ -169,6 +169,6 @@ plt.title('Lineweaver-Burk Plot for Pepsin')
 plt.legend()
 plt.show()
 ```
-<p aligh='center'>
+<p align='center'>
     <img src='https://github.com/dindagustiayu/The-Matrix-of-Enzymatic-Kinetics/blob/main/Linear%20fit%20svg/Linearweaver-Burk%20Plot%20for%20pepsin.svg'>
 </p>
